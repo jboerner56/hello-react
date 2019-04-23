@@ -6,6 +6,7 @@ import logo from './logo.svg'; // import an image. (React will do optimization)
 import './App.css'; // recommendation: no individual style files. just use index.css
 
 import Greet from './Greet';
+import Counter from './Counter';
 //"App is a component"
 // a component is a function that returns a react element 
 // a react element if a description of a DOM element (or tree)
@@ -15,7 +16,13 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <Counter number={3} />
+        <Counter number={3} />
+        <Counter number={3} />
+        <Greet whom="Bob Barker" 
+        />
         <Greet />
+
         <a
           className="App-link"
           href="https://reactjs.org"

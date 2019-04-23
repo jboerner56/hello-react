@@ -8,10 +8,12 @@ import React from 'react';
 
 
 //#3 declare component
-function Greet() {
+function Greet(props) {
     // every component must return a react element.
     return (
-        <h1>Hey You</h1>
+        <h1>Hey {props.whom ? props.whom : "You"}!
+
+        </h1>
     );
 }
 
