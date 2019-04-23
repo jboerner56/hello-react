@@ -20,7 +20,7 @@ function App() {
         {/* <Counter number={3} />
         <Counter number={3} />
         <Counter number={3} /> */}
-        <ClickCounter />
+        <ClickCounter startAt={135664} />
         <ClickCounter />
         <Greet whom="Bob Barker" 
         />
