@@ -7,6 +7,7 @@ import './App.css'; // recommendation: no individual style files. just use index
 
 import Greet from './Greet';
 import Counter from './Counter';
+import ClickCounter from './ClickCounter';
 //"App is a component"
 // a component is a function that returns a react element 
 // a react element if a description of a DOM element (or tree)
@@ -16,9 +17,11 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        {/* <Counter number={3} />
         <Counter number={3} />
-        <Counter number={3} />
-        <Counter number={3} />
+        <Counter number={3} /> */}
+        <ClickCounter />
+        <ClickCounter />
         <Greet whom="Bob Barker" 
         />
         <Greet />
