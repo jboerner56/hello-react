@@ -22,31 +22,46 @@ constructor(props) {
   };
 }
   render () {
+
+    const names = ["bob","happy", "chubbs"];
+
     return (
       <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <input
+      <ul>
+        {
+          // return after arrow function before li's is implied but does not have to be written
+          names.map(n => <li>{n}</li>)
+          // can also explicitly use return
+          // names.map(n => 
+          // return 
+          // {
+          //   <li>{n}</li>)
+          // }
+        }
+      </ul>
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
+        {/* <input
         onChange={
           this._updateInputText
         }
-        />
-        <Output 
-        text={this.state.inputText}/>
+        /> */}
+        {/* <Output 
+        text={this.state.inputText}/> */}
         {/* <ClickCounter startAt={135664} />
         <ClickCounter />
         <Greet whom="Bob Barker" 
         />
       <Greet /> */}
 
-        <a
+        {/* <a
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
           >
           Learn React
-        </a>
+        </a> */}
       </header>
     </div>
   );
