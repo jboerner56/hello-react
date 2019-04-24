@@ -18,12 +18,11 @@ constructor(props) {
   super(props);
 
   this.state = {
-    inputText: ''
+    inputText: '',
+    names: ["bob","happy", "chubbs"]
   };
 }
   render () {
-
-    const names = ["bob","happy", "chubbs"];
 
     return (
       <div className="App">
@@ -31,7 +30,7 @@ constructor(props) {
       <ul>
         {
           // return after arrow function before li's is implied but does not have to be written
-          names.map(n => <li>{n}</li>)
+          this.state.names.map(n => <li>{n}</li>)
           // can also explicitly use return
           // names.map(n => 
           // return 
@@ -41,13 +40,18 @@ constructor(props) {
         }
       </ul>
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        {/* <input
+        <input
         onChange={
           this._updateInputText
         }
-        /> */}
-        {/* <Output 
-        text={this.state.inputText}/> */}
+        />
+        <Output 
+        text={this.state.inputText}/>
+
+        <Output 
+        text={this.state.inputText}
+        transform="l33t"
+        />
         {/* <ClickCounter startAt={135664} />
         <ClickCounter />
         <Greet whom="Bob Barker" 
