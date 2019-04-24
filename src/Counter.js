@@ -30,14 +30,21 @@ class Counter extends React.Component {
             });
         }, 100);
     }
-    // define what will be drawn
     render() {
         return (
+        <div>
         <h1>
-            {this.state.number}
+            {this._incrementToMaxAndMin}
         </h1>
+        </div>
         );
     }
+    // _bouncingCounter= () => {
+    //     this.setState({
+    //         number: this.state.
+    //     })
+    // }
+    // define what will be drawn
 }
 // function Counter(props) {
 // return (

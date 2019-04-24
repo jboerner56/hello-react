@@ -5,17 +5,30 @@ import React from 'react';
 // node.js would look like
 // const react = require('react');
 
-
-
 //#3 declare component
-function Greet(props) {
-    // every component must return a react element.
-    return (
-        <h1>Hey {props.whom ? props.whom : "You"}!
 
-        </h1>
-    );
-}
+export class Greet extends React.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            name: props.whom || "You"
+        };
+    }
+    render() {
+        return (
+        <div>
+            <h3>{this.state.name}</h3>
+            <button
+            onClick={this._lowercase}>Lowercase</button>
+        </div>
+        )
+    }
+    _lowercase = () => {
+        this.setState({
+            whom: (this.state.whom).toLowerCase()
+        });
+    }
+} 
 
 
 
