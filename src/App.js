@@ -13,15 +13,17 @@ import Output from './Output';
 // a component is a function that returns a react element 
 // a react element if a description of a DOM element (or tree)
 // the most common way to specify a react element is by using JSX.
-function App() {
-  return (
-    <div className="App">
+class App extends React.Component{
+
+  render () {
+    return (
+      <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <input
         onChange={
           (e) => {
-            console.log('typing something');
+            console.log('typing something still');
             console.log(e.target.value);
           }
         }
@@ -32,19 +34,20 @@ function App() {
         <ClickCounter />
         <Greet whom="Bob Barker" 
         />
-        <Greet /> */}
+      <Greet /> */}
 
         <a
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
-        >
+          >
           Learn React
         </a>
       </header>
     </div>
   );
+  }
 }
 // equivalent to module.exports
 export default App;
