@@ -14,7 +14,13 @@ import Output from './Output';
 // a react element if a description of a DOM element (or tree)
 // the most common way to specify a react element is by using JSX.
 class App extends React.Component{
+constructor(props) {
+  super(props);
 
+  this.state = {
+    inputText: ''
+  };
+}
   render () {
     return (
       <div className="App">
@@ -25,11 +31,14 @@ class App extends React.Component{
           (e) => {
             console.log('typing something still');
             console.log(e.target.value);
+            this.setState({
+              inputText: e.target.value
+            });
           }
         }
         />
         <Output 
-        text="does this work"/>
+        text={this.state.inputText}/>
         {/* <ClickCounter startAt={135664} />
         <ClickCounter />
         <Greet whom="Bob Barker" 
