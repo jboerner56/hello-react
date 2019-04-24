@@ -28,13 +28,7 @@ constructor(props) {
         <img src={logo} className="App-logo" alt="logo" />
         <input
         onChange={
-          (e) => {
-            console.log('typing something still');
-            console.log(e.target.value);
-            this.setState({
-              inputText: e.target.value
-            });
-          }
+          this._updateInputText
         }
         />
         <Output 
@@ -56,6 +50,16 @@ constructor(props) {
       </header>
     </div>
   );
+  }
+
+  _updateInputText = (e) => {
+    console.log('typing something still');
+    console.log(e.target.value);
+
+    // this is a request for a change that'll take place at some point in the future.
+    this.setState({
+      inputText: e.target.value
+    });
   }
 }
 // equivalent to module.exports
